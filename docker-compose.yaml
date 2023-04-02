@@ -15,11 +15,11 @@ services:
       - ./import-catalog.sql:/docker-entrypoint-initdb.d/import-catalog.sql
     ports:
       - "3308:3306"
-  acommodation-api:
-    build: ../accommodation-microservice
-    restart: always
-    ports:
-      - 8084:8084
+  # acommodation-api:
+  #   build: ../accommodation-microservice
+  #   restart: always
+  #   ports:
+  #     - 8084:8084
   # user-api:
   #   build: ../user-microservice
   #   restart: always
