@@ -1,11 +1,11 @@
-#SQL Import Catalog and Docker Compose File Repository
+# SQL Import Catalog and Docker Compose File Repository
 This repository contains SQL import catalog and Docker Compose file for creating a database and importing data from various sources.
 
-#Contents
+# Contents
 sql-import-catalog: This directory contains SQL scripts for creating tables and importing data from various sources such as CSV, JSON, XML, etc.
 docker-compose.yml: This file is used for configuring and running Docker containers for the database
 
-#Installation and Setup
+# Installation and Setup
 To use the SQL import catalog and Docker Compose file in this repository, follow these steps:
 
 Clone this repository to your local machine.
