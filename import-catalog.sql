@@ -30,7 +30,8 @@ CREATE TABLE user (
     penalties int DEFAULT 0,
     role enum('GUEST', 'HOST'),
     PRIMARY KEY(id),
-    CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id)
+    CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id),
+    UNIQUE(username) 
 );
 
 INSERT INTO user (email, username, first_name, last_name, phone_number, address_id, role) 
