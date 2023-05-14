@@ -21,6 +21,7 @@ CREATE TABLE accommodation (
     is_auto bit(1) DEFAULT NULL,
     location varchar(255) NOT NULL,
     photo varchar(255) NOT NULL,
+    user_id bigint DEFAULT NULL,
     PRIMARY KEY (id),
     KEY `address_id` (address_id),
     CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id)
