@@ -20,7 +20,6 @@ INSERT INTO address (country, city, street, number, longitude, latitude) VALUES 
 
 CREATE TABLE user (
     id bigint not null auto_increment,
-    address_id bigint,
     email varchar(255),
     username varchar(255),
     password varchar(255),
@@ -29,9 +28,11 @@ CREATE TABLE user (
     phone_number varchar(255),
     penalties int DEFAULT 0,
     role enum('GUEST', 'HOST'),
-    PRIMARY KEY(id),
-    CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id)
+	location varchar(255),
+	avgGrade float,
+	isHighlighted BOOLEAN,
+    PRIMARY KEY(id)
 );
 
-INSERT INTO user (email, username, first_name, last_name, phone_number, address_id, role) 
-          VALUES ('kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 1, 'HOST');
+INSERT INTO user (email, username, first_name, last_name, phone_number, role, location, avgGrade, isHighlighted) 
+          VALUES ('kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'HOST', 'bla bla', 0, FALSE);
