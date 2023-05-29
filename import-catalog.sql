@@ -18,7 +18,7 @@ INSERT INTO address (country, city, street, number, longitude, latitude) VALUES 
 INSERT INTO address (country, city, street, number, longitude, latitude) VALUES ('Indonesia', 'Denpasar', 'Milana Savica', '12', 19.796963, 45.240372);
 INSERT INTO address (country, city, street, number, longitude, latitude) VALUES ('Thailand', 'Bangkok', 'Milana Savica', '12', 19.796963, 45.240372);
 
-CREATE TABLE user (
+CREATE TABLE users (
     id bigint not null auto_increment,
     email varchar(255),
     username varchar(255),
@@ -29,8 +29,8 @@ CREATE TABLE user (
     penalties int DEFAULT 0,
     role enum('GUEST', 'HOST'),
 	location varchar(255),
-	avgGrade float,
-	isHighlighted BOOLEAN,
+	avg_grade float,
+	is_highlighted BOOLEAN,
     PRIMARY KEY(id)
 );
 
