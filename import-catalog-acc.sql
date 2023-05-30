@@ -21,8 +21,13 @@ CREATE TABLE accommodation (
     is_auto bit(1) DEFAULT NULL,
     location varchar(255) NOT NULL,
     photo varchar(255) NOT NULL,
+    user_id bigint DEFAULT NULL,
     PRIMARY KEY (id),
     KEY `address_id` (address_id),
     CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id)
 );
+
+INSERT INTO accommodation (id, address_id, name, min_guests, max_guests, facilities, accommodation_grade_id, available_beds, is_auto, location, photo) VALUES
+(1, NULL, 'Vila na Telepu', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1'),
+(2, NULL, 'Vila u Krnjaci', 2, 8, NULL, NULL, 8, b'0', 'Belgrade', 'photo2');
 
