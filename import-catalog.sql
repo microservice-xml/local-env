@@ -26,16 +26,19 @@ CREATE TABLE user (
     first_name varchar(255),
     last_name varchar(255),
     phone_number varchar(255),
+    deleted boolean default false,
     penalties int DEFAULT 0,
     role enum('GUEST', 'HOST'),
 	location varchar(255),
 	avg_grade float,
 	is_highlighted BOOLEAN,
-    PRIMARY KEY(id)
+    PRIMARY KEY(id),
+    CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id),
+    UNIQUE(username) 
 );
 
-INSERT INTO user (email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted) 
-          VALUES ('kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'HOST', 'bla bla', 0, FALSE);
+INSERT INTO user (email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted) 
+          VALUES ('kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'HOST', 'bla bla', 0, FALSE, false);
 
 
 CREATE TABLE rate (
