@@ -25,6 +25,14 @@ services:
       - ./import-catalog-acc.sql:/docker-entrypoint-initdb.d/import-catalog-acc.sql
     ports:
       - "3309:3306"
+  rabbitmq:
+    image: rabbitmq:3.9.11-management
+    ports:
+      - "5672:5672" # RabbitMQ default port
+      - "15672:15672" # RabbitMQ management UI port
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
   # acommodation-api:
   #   build: ../accommodation-microservice
   #   restart: always
