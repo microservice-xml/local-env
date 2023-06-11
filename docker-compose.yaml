@@ -25,6 +25,16 @@ services:
       - ./import-catalog-acc.sql:/docker-entrypoint-initdb.d/import-catalog-acc.sql
     ports:
       - "3309:3306"
+  neo4j:
+    build:
+      context: .
+      dockerfile: Dockerfile-neo4j
+    restart: unless-stopped
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./import.cyp:/var/lib/neo4j/import/import.cyp
   rabbitmq:
     image: rabbitmq:3.9.11-management
     ports:
@@ -38,7 +48,7 @@ services:
     restart: always
     ports:
       - "8088:8088"
-      - "9088:9088"  
+      - "9088:9088"
   # acommodation-api:
   #   build: ../accommodation-microservice
   #   restart: always

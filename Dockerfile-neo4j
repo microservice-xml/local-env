@@ -1,0 +1,3 @@
+FROM neo4j:3.5
+COPY ./init-neo4j.sh /init-neo4j.sh
+RUN chmod +x /init-neo4j.sh
