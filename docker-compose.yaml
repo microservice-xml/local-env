@@ -33,6 +33,12 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
+  notification-api:
+    build: ../notification-microservice
+    restart: always
+    ports:
+      - "8088:8088"
+      - "9088:9088"  
   # acommodation-api:
   #   build: ../accommodation-microservice
   #   restart: always
