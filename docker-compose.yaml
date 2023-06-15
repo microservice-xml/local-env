@@ -72,6 +72,41 @@ services:
     environment:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=password
+
+  promtail:
+    image: grafana/promtail:2.2.1
+    volumes:
+      - ./shared:/var/log
+      - ./promtail-config.yaml:/etc/promtail/promtail-config.yaml
+    command: -config.file=/etc/promtail/promtail-config.yaml 
+
+  loki:
+    image: grafana/loki:2.2.1
+    ports:
+      - "4200:3100"
+    volumes:
+      - ./loki-config.yaml:/etc/loki/loki-config.yaml
+    command: -config.file=/etc/loki/loki-config.yaml
+
+
+  logstash:
+    image: logstash:7.16.2
+    container_name: logstash
+    restart: always
+    volumes:
+      - type: volume
+        source: shared
+        target: /home
+    ports:
+    - '9600:9600'   
+ 
+volumes:
+  shared:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: ./shared
   # acommodation-api:
   #   build: ../accommodation-microservice
   #   restart: always
