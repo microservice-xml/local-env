@@ -30,5 +30,20 @@ CREATE TABLE accommodation (
 
 INSERT INTO accommodation (id, address_id, name, min_guests, max_guests, facilities, accommodation_grade_id, available_beds, is_auto, location, photo, deleted) VALUES
 (1, NULL, 'Vila na Telepu', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
-(2, NULL, 'Vila u Krnjaci', 2, 8, NULL, NULL, 8, b'0', 'Belgrade', 'photo2', false);
+(2, NULL, 'Vila u Krnjaci', 2, 8, NULL, NULL, 8, b'0', 'Belgrade', 'photo2', false),
+(3, NULL, 'Vila na Adicama', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(4, NULL, 'Vila u Kamenici', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(5, NULL, 'Vila Impresija', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(6, NULL, 'Vila Depresija', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(7, NULL, 'Vila na Pezosu', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(8, NULL, 'Vila na Detelinari', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(9, NULL, 'Vila 1', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(10, NULL, 'Vila 2', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(11, NULL, 'Vila 3', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(12, NULL, 'Vila 4', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(13, NULL, 'Vila 5', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(14, NULL, 'Vila 6', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(15, NULL, 'Vila 7', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(16, NULL, 'Vila 8', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false),
+(17, NULL, 'Vila 9', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false);
 
