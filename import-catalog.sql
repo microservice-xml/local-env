@@ -37,8 +37,19 @@ CREATE TABLE user (
     UNIQUE(username) 
 );
 
-INSERT INTO user (email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted) 
-          VALUES ('kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'HOST', 'bla bla', 0, FALSE, false);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password) 
+          VALUES 
+		   (1, 'gravarica@gmail.com', 'gravarica', 'Milos', 'Gravara', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (2, 'kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (3, 'vukoman@gmail.com', 'vukoman', 'Vladimir', 'Vukoman', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (4, 'lunic@gmail.com', 'lunic', 'Vladimir', 'Lunic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (5, 'spira@gmail.com', 'spira', 'Nikola', 'Spiric', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (6, 'vuk@gmail.com', 'vuk', 'Vuk', 'Milanovic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (7, 'ilija@gmail.com', 'ilija', 'Ilija', 'Galin', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (8, 'andrija@gmail.com', 'andrija', 'Andrija', 'Stanisic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (9, 'host1@gmail.com', 'host1', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (10, 'host2@gmail.com', 'host2', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
+           (11, 'host3@gmail.com', 'host3', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, false,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC');
 
 
 CREATE TABLE rate (
