@@ -54,15 +54,3 @@ CREATE
     (lunic)-[:RATED {value: 5}]->(gruborka),
     (ilija)-[:RATED {value: 2}]->(gruborka),
     (vuk)-[:RATED {value: 2}]->(gruborka)
-
-
-MATCH (a:Accommodation)<-[:STAYED_IN]-(u:User {name: 'Milos Gravara'})-[r1:RATED]->(a)<-[r2:RATED]-(otherUser:User)
-WHERE r1.value = r2.value OR r1.value - 1 = r2.value OR r1.value + 1 = r2.value
-RETURN a, otherUser
-
-MATCH (u:User)-[:STAYED_IN]->(a:Accommodation)<-[r:RATED]-(u)
-WHERE u.userId IN [1, 2] AND r.value IN [4, 5]
-RETURN a
-
-
-proceduralno isfiltrirati 
