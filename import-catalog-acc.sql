@@ -43,3 +43,14 @@ INSERT INTO accommodation (id, address_id, name, min_guests, max_guests, facilit
 (12, NULL, 'Vila 4', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false, 10),
 (13, NULL, 'Vila 5', 6, 10, NULL, NULL, 10, b'0', 'Novi Sad', 'photo1', false, 10);
 
+CREATE TABLE rate (
+	id bigint not null auto_increment,
+	host_id bigint not null,
+	guest_id bigint not null,
+	rate_value int not null,
+	rate_date datetime not null,
+	PRIMARY KEY(id),
+	CONSTRAINT  FOREIGN KEY(guest_id) REFERENCES user(id),
+    	CONSTRAINT  FOREIGN KEY(host_id) REFERENCES user(id)
+);
+
