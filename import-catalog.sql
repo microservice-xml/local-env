@@ -33,24 +33,31 @@ CREATE TABLE user (
 	avg_grade float,
 	is_highlighted BOOLEAN,
     PRIMARY KEY(id),
-    CONSTRAINT FOREIGN KEY (address_id) REFERENCES address(id),
     UNIQUE(username) 
 );
 
-INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password) 
-VALUES 
-(1, 'gravarica@gmail.com', 'gravarica', 'Milos', 'Gravara', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(2, 'kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(3, 'vukoman@gmail.com', 'vukoman', 'Vladimir', 'Vukoman', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(4, 'lunic@gmail.com', 'lunic', 'Vladimir', 'Lunic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(5, 'spira@gmail.com', 'spira', 'Nikola', 'Spiric', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(6, 'vuk@gmail.com', 'vuk', 'Vuk', 'Milanovic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(7, 'ilija@gmail.com', 'ilija', 'Ilija', 'Galin', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(8, 'andrija@gmail.com', 'andrija', 'Andrija', 'Stanisic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(9, 'host1@gmail.com', 'host1', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(10, 'host2@gmail.com', 'host2', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC'),
-(11, 'host3@gmail.com', 'host3', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC');
-
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES (1, 'gravarica@gmail.com', 'gravarica', 'Milos', 'Gravara', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES (2, 'kalina@gmail.com', 'kalina', 'Nikola', 'Kalinic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE, '$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(3, 'vukoman@gmail.com', 'vukoman', 'Vladimir', 'Vukoman', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(4, 'lunic@gmail.com', 'lunic', 'Vladimir', 'Lunic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(5, 'spira@gmail.com', 'spira', 'Nikola', 'Spiric', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(6, 'vuk@gmail.com', 'vuk', 'Vuk', 'Milanovic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(7, 'ilija@gmail.com', 'ilija', 'Ilija', 'Galin', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(8, 'andrija@gmail.com', 'andrija', 'Andrija', 'Stanisic', '0658897554', 'GUEST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(9, 'host1@gmail.com', 'host1', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(10, 'host2@gmail.com', 'host2', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
+INSERT INTO user (id, email, username, first_name, last_name, phone_number, role, location, avg_grade, is_highlighted, deleted, password, penalties) 
+VALUES(11, 'host3@gmail.com', 'host3', 'Host', 'Hostovic', '0658897554', 'HOST', 'bla bla', 0, FALSE, FALSE,'$2a$10$WFEOLytmEINkclRLCezX8.DOjrezZXW6/Bd.2Sl3GAFqOrTTOs0wC', 0);
 
 CREATE TABLE rate (
 	id bigint not null auto_increment,
@@ -60,5 +67,5 @@ CREATE TABLE rate (
 	rate_date datetime not null,
 	PRIMARY KEY(id),
 	CONSTRAINT  FOREIGN KEY(guest_id) REFERENCES user(id),
-    	CONSTRAINT  FOREIGN KEY(host_id) REFERENCES user(id)
+	CONSTRAINT  FOREIGN KEY(host_id) REFERENCES user(id)
 );
