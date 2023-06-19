@@ -70,3 +70,15 @@ INSERT INTO rate (id, accommodation_id, guest_id, host_id, rate_date, rate_value
 INSERT INTO rate (id, accommodation_id, guest_id, host_id, rate_date, rate_value) VALUES (14, 12, 2, 11, "2023-06-17", 5);
 INSERT INTO rate (id, accommodation_id, guest_id, host_id, rate_date, rate_value) VALUES (15, 4, 2, 10, "2023-06-17", 5);
 
+CREATE TABLE rate (
+	id bigint not null auto_increment,
+	accommodation_id bigint not null,
+	host_id bigint not null,
+	guest_id bigint not null,
+	rate_value int not null,
+	rate_date datetime not null,
+	PRIMARY KEY(id),
+	CONSTRAINT  FOREIGN KEY(guest_id) REFERENCES user(id),
+    	CONSTRAINT  FOREIGN KEY(host_id) REFERENCES user(id)
+);
+
