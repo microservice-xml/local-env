@@ -45,6 +45,7 @@ INSERT INTO accommodation (id, address_id, name, min_guests, max_guests, facilit
 
 CREATE TABLE rate (
 	id bigint not null auto_increment,
+	accommodation_id bigint not null,
 	host_id bigint not null,
 	guest_id bigint not null,
 	rate_value int not null,
